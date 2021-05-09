@@ -1,8 +1,9 @@
-import { IconButton, Paper, Button, Typography } from '@material-ui/core'
+import React from 'react'
+
+import { Paper } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faGoogle,
-    faFacebookF,
     faFacebook,
     faLinkedinIn,
     faGithub,
@@ -13,10 +14,7 @@ import {
     faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons'
 import { makeStyles } from '@material-ui/styles'
-import React from 'react'
-import { medium } from '../../assets/radiuses'
 import { SocialMediaDetails } from '../../profileDetails'
-import { Assessment } from '@material-ui/icons'
 
 const useStyles = makeStyles({
     paper: {
@@ -71,6 +69,7 @@ export function SocialMedia() {
             <FontAwesomeIcon
                 icon={faLinkedinIn}
                 className={classes.button}
+                target="_blank"
                 style={{ backgroundColor: '#0e76a8' }}
             ></FontAwesomeIcon>
         ),
@@ -78,6 +77,7 @@ export function SocialMedia() {
             <FontAwesomeIcon
                 icon={faGithub}
                 className={classes.button}
+                target="_blank"
                 style={{ backgroundColor: '#333' }}
             ></FontAwesomeIcon>
         ),
@@ -85,6 +85,7 @@ export function SocialMedia() {
             <FontAwesomeIcon
                 icon={faInstagram}
                 className={classes.button}
+                target="_blank"
                 style={{ backgroundColor: '#c13584' }}
             ></FontAwesomeIcon>
         ),
@@ -128,8 +129,19 @@ export function SocialMedia() {
     return (
         <Paper elevation={0} className={classes.paper}>
             {Object.entries(socialMediaDict).map(([key, value]) => {
-                console.log('Check: ' + key)
-                return socialMediaIcons[key]
+                return (
+                    <a
+                        href={value.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            height: 'fit-content',
+                            width: 'fit-content',
+                        }}
+                    >
+                        {socialMediaIcons[key]}
+                    </a>
+                )
             })}
         </Paper>
     )

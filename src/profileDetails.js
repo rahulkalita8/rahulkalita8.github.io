@@ -1,38 +1,38 @@
 export const SocialMediaDetails = {
     facebook: {
         enable: true,
-        url: 'https://facebook.com',
+        url: 'https://www.facebook.com/rahul.kalita.98',
     },
     linkedIn: {
         enable: true,
-        url: 'https://linkedin.com',
+        url: 'https://www.linkedin.com/in/rahul-kalita/',
     },
     instagram: {
         enable: true,
-        url: 'https://instagram.com',
+        url: 'https://www.instagram.com/_rahulkalita/',
     },
     github: {
         enable: true,
-        url: 'https://github.com',
+        url: 'https://github.com/rahulkalita8',
     },
     google: {
-        enable: true,
+        enable: false,
         url: 'https://github.com',
     },
     twitter: {
-        enable: true,
+        enable: false,
         url: 'https://github.com',
     },
     medium: {
-        enable: true,
+        enable: false,
         url: 'https://github.com',
     },
     stackOverflow: {
-        enable: true,
+        enable: false,
         url: 'https://github.com',
     },
     twitch: {
-        enable: true,
+        enable: false,
         url: 'https://github.com',
     },
 }

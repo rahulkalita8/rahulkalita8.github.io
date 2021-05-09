@@ -12,7 +12,7 @@ export default (theme) => ({
         width: '90%',
         padding: '20px 10px',
         margin: '0px auto',
-        marginTop: '30%',
+        marginTop: '20rem',
         color: '#000',
         fontSize: '10rem',
         fontFamily: 'OpenSans',
